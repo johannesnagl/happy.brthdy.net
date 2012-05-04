@@ -2,7 +2,7 @@
 		$name         = ucfirst(strtolower((!empty($_GET["name"])) ? $_GET["name"] : "Unbekannte/r"));
 		$ogTitle      = "Happy Birthday, " . $name . "!";
 		$webAppPath   = "http://happy.brthdy.net";
-		$ogUrl        = $webAppPath . "/" . str_replace("/", "", strtolower($_SERVER['REQUEST_URI']));
+		$ogUrl        = $webAppPath . rtrim(strtolower($_SERVER['REQUEST_URI']), "/");
     $youtubeToken = (empty($_GET["party_mode"])) ? "wFh-rX_Sfhs" : "ZkZX9HZos9w";
  ?>
 <!DOCTYPE html> 
