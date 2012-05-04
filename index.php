@@ -1,8 +1,9 @@
 <?
-		$name        = ucfirst(strtolower((!empty($_REQUEST["name"])) ? $_REQUEST["name"] : "Unbekannte/r"));
-		$ogTitle     = "Happy Birthday, " . $name . "!";
-		$webAppPath  = "http://happy.brthdy.net";
-		$ogUrl       = $webAppPath . "/" . str_replace("/", "", strtolower($_SERVER['REQUEST_URI']));
+		$name         = ucfirst(strtolower((!empty($_GET["name"])) ? $_GET["name"] : "Unbekannte/r"));
+		$ogTitle      = "Happy Birthday, " . $name . "!";
+		$webAppPath   = "http://happy.brthdy.net";
+		$ogUrl        = $webAppPath . "/" . str_replace("/", "", strtolower($_SERVER['REQUEST_URI']));
+    $youtubeToken = (empty($_GET["party_mode"])) ? "wFh-rX_Sfhs" : "ZkZX9HZos9w";
  ?>
 <!DOCTYPE html> 
   <meta charset="utf-8"> 
@@ -54,7 +55,7 @@
     </tr> 
   </table> 
 
-	<object width="425" height="344" style="position: absolute; left: -5000px; top: -5000px;"><param name="movie" value="http://www.youtube.com/v/wFh-rX_Sfhs"><param name="allowFullScreen" value="1true"><param name="allowscriptaccess" value="always"><embed src="http://www.youtube.com/v/wFh-rX_Sfhs&fs=1&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object> 
+	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?=$youtubeToken?>?rel=0&autoplay=1" style="position: absolute; left: -5000px; top: -5000px;"></iframe> 
 
 	<script src="<?=$webAppPath?>/js/ga_social_tracking.js"></script> 
 	<div id="fb-root"></div>
