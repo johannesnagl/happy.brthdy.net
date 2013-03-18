@@ -4,11 +4,17 @@
 		$webAppPath   = "http://happy.brthdy.net";
 		$ogUrl        = $webAppPath . rtrim(strtolower($_SERVER['REQUEST_URI']), "/");
     $youtubeToken = (empty($_GET["party_mode"])) ? "wFh-rX_Sfhs" : "ZkZX9HZos9w";
+    		$specialCss   = "";
+    		
+    if($name == "Michi" && date("md") == "0319"){
+    	$specialCss = "background: url(http://www.facebook-pmdcenter.com/assets/profiles/b9b966f1-9d92-4882-8a13-77412b354806/diesociali_logo175x109.png) repeat;";	
+    }
  ?>
 <!DOCTYPE html> 
   <meta charset="utf-8"> 
   <title><?=$ogTitle?></title> 
   <link rel="stylesheet" href="<?=$webAppPath?>/css/app.css"> 
+  <?php echo $specialCss; ?>
   <meta property="og:title" content="<?=$ogTitle?>">
   <meta property="og:site_name" content="brthdy.net">
   <meta property="og:url" content="<?=$ogUrl?>">
