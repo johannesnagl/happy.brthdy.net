@@ -9,6 +9,10 @@
     if ($name == "Patrick" && date("md") == "0315") {
       $youtubeToken = "QH2-TGUlwu4"; // nyam cat
     }
+    
+    if ($name == "Martin" && date("md") == "0403") {
+      $youtubeToken = "7ypAoltbxyk?start=23&autoplay=1&rel=0"; // ozzy!
+    }
 
     if ($name == "Michi" && date("md") == "0319") {
       $youtubeToken = "xJ3-xGdai44"; // heino
