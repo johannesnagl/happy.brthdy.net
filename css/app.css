@@ -1,0 +1,86 @@
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}
+
+html { height: 100%; width: 100%; }
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: url(/img/cake.gif);
+}
+
+table, td {
+	height: 100%;
+	width: 100%;
+}
+
+table td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+table td .app {
+	width: 910px;
+	margin: 0 auto;
+}
+
+span {
+	font-family: helvetica, verdana, arial;
+	background-color: #fff;
+	font-size: 55px;
+	font-weight: bold;
+	padding: 10px;
+	border: 10px red dotted;
+}
+
+.opener {
+	 font-size: 20px;
+	 border: none;
+}
+
+.plugins {
+	display: inline-block;
+	border: 0 none;
+	font-size: 10px;
+	line-height: 20px;
+	text-align: center;
+	background-color: #fff;
+	width: 520px;
+}
+.plugins div {
+	width: 33.3%;
+	float: left;
+}
+
+.plugins span {
+	padding: 0;
+	border: 0 none;
+	font-size: 10px;
+}
+
+.comments {
+	margin: 80px auto 0;
+	background-color: #fff;
+	width: 520px;
+	padding: 20px 10px;
+}
+
+.comments span {
+	padding: 0;
+	border: 0 none;
+	font-size: 10px;
+}

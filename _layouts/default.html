@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+  <meta charset="utf-8">
+  <title>{{ site.name }}</title>
+  <link rel="stylesheet" href="{{ site.url }}/css/app.css">
+  <meta property="og:title" content="<?=$ogTitle?>">
+  <meta property="og:site_name" content="brthdy.net">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="{{ site.url }}/img/cake.gif">
+  <meta property="og:description" content="Du hast heute Geburtstag und wir möchten dir alle herzlich dazu gratulieren. Hoch sollst du leben!">
+  <meta property="fb:app_id" content="209699839076964">
+
+
+  {{ content }}
+
+
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24519864-1']);
+    _gaq.push(['_setDomainName', '.brthdy.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = 'http://www.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <script src="{{ site.url }}/js/ga_social_tracking.js"></script>
+  <div id="fb-root"></div>
+  <script>
+    $("<fb:comments>", { width: 480, href: document.location.href }).appendTo(".comments");
+    $("<fb:like>", { href: document.location.href, send: "false", layout: "button_count", show_faces: "false", font: "verdana "}).appendTo(".fb-like");
+
+    $(function() {
+      $("#name").text(document.location.pathname);
+      document.title = "Happy Birthday, " + document.location.pathname + "!";
+    });
+
+    window.fbAsyncInit = function() {
+      FB.init({appId: '209699839076964', status: true, cookie: true, xfbml: true});
+      _ga.trackFacebook();
+    };
+    (function() {
+      var e = document.createElement('script'); e.async = true;
+      e.src = 'http://connect.facebook.net/de_DE/all.js';
+      document.getElementById('fb-root').appendChild(e);
+    }());
+  </script>
+  <script>
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+
+      // Setup a callback to track once the script loads.
+      twitterWidgets.onload = _ga.trackTwitter;
+
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang: 'de'}</script>
+</html>
