@@ -5,6 +5,16 @@ title: 404
 
 <h1>Happy Birthday, <span id="n"></span>!</h1>
 
+<script>
+function a(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+var name = a(location.pathname.replace('/', ''));
+document.title = "Happy Birthday, " + name + "!";
+document.querySelector("#n").innerHTML = name;
+</script>
+
 <div class="cake-body">
     <div class="layer f1">
         <div class="spot-group sg1">
