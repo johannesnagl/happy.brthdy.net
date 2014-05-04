@@ -2,6 +2,6 @@
 layout: default
 ---
 <h1>Happy Birthday to …</h1>
-<form onsubmit="location.href='/' + document.getElementById('a').value;return false;">
+<form onsubmit="location.href='/' + document.querySelector('#a').value;return false;">
   <input id="a" placeholder="first name goes here …">
 </form>
