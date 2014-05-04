@@ -32,8 +32,12 @@
     $("<fb:like>", { href: document.location.href, send: "false", layout: "button_count", show_faces: "false", font: "verdana "}).appendTo(".fb-like");
 
     $(function() {
-      $("#name").text(document.location.pathname);
-      document.title = "Happy Birthday, " + document.location.pathname + "!";
+      function a(s) {
+        return s.charAt(0).toUpperCase() + s.slice(1);
+      }
+      var name = a(document.location.pathname.replace('/', ''));
+      $("#name").text(name);
+      document.title = "Happy Birthday, " + name + "!";
     });
 
     window.fbAsyncInit = function() {
