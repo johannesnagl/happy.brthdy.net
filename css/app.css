@@ -253,6 +253,19 @@ input {
   top: -5px;
   left: 4px;
 }
+
+@-webkit-keyframes rotation {
+	0%, 50%, 100% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(10deg);
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+  }
+}
+
 .flame{
   display:block;
   height:16px;
@@ -263,7 +276,10 @@ input {
   top:-20px;
   left:1px;
   box-shadow: 0px 0px 20px yellow;
+	-webkit-animation: rotation 2s infinite linear;
+
 }
+
 .highlight{
   display:block;
   height:30px;
