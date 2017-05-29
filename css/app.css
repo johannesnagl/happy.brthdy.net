@@ -171,7 +171,7 @@ input {
 /* Icing Drips */
 
 .drip-ctn{
-    position:absolute;
+    position:absolute
     top:0;
     z-index:1;
 }
