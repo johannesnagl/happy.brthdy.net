@@ -1,4 +1,3 @@
 name: Happy Brthdy
-markdown: redcarpet
-pygments: true
+markdown: kramdown
 url: http://happy.brthdy.net
